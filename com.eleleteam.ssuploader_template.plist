@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.eleleteam.ssuploader</string> <!-- Change to match your daemon name -->
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/path/to/your/daemon/executable</string> <!-- Replace with the path to your daemon executable -->
+        <string>optional_argument_1</string> <!-- If your daemon requires arguments, specify them here -->
+        <string>optional_argument_2</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/> <!-- Start the daemon when the system boots -->
+
+    <!-- Optionally, specify how to restart the daemon if it crashes -->
+    <key>KeepAlive</key>
+    <true/>
+    <key>RestartInterval</key>
+    <integer>3600</integer> <!-- Restart the daemon every 3600 seconds (1 hour), adjust as needed -->
+
+    <!-- Optionally, specify the working directory for your daemon -->
+    <!-- <key>WorkingDirectory</key> -->
+    <!-- <string>/path/to/your/daemon/working/directory</string> -->
+
+    <!-- Optionally, specify environment variables for your daemon -->
+    <!-- <key>EnvironmentVariables</key> -->
+    <!-- <dict> -->
+    <!--     <key>KEY</key> -->
+    <!--     <string>VALUE</string> -->
+    <!-- </dict> -->
+</dict>
+</plist>
